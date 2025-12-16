@@ -61,6 +61,46 @@ function getBooks(){
                 document.querySelector("#detailISBN").innerText=book.isbn;
               
             }
+
+            async function loadBooks() {
+   let searchText = document.getElementById("searchInput").value;
+
+    const url = `https://www.googleapis.com/books/v1/volumes?q=${searchText}`;
+searchText ="";
+    try {
+        // wait for response
+        const response = await fetch(url);
+
+        // convert to JSON
+        const data = await response.json();
+
+        const books = data.items;
+        const tableBody = document.getElementById("tableBody");
+        tableBody.innerHTML = "";
+       
+
+        books.forEach(book => {
+            const info = book.volumeInfo;
+
+            const row = document.createElement("tr");
+
+            row.innerHTML = `
+                <td>${info.title || "No Title"}</td>
+                <td>${info.authors ? info.authors.join(", ") : "Unknown"}</td>
+                <td>${info.categories ? info.categories.join(", ") : "None"}</td>
+                <td>${info.publishedDate || "N/A"}</td>
+            `;
+
+            tableBody.appendChild(row);
+        });
+
+    } catch (error) {
+        console.error("Error fetching books:",error);
+     }
+
+ 
+}
+
              
                function deleteAllBooks(){
                localStorage.clear();

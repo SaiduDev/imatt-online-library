@@ -38,16 +38,29 @@
 
         <div class="container" style="height: 700px">
           <div class="searchDiv">
-            <div class="searcgIcon">
+            <div class="searchIcon">
                 <i class="fas fa-search"> </i>
             </div>
-                       <input type="search" name="" id="searchInput" placeholder=" Search For Books Here">
-            <button id="searchBtn">Search</button>
+                       <input type="text" name="" id="searchInput" placeholder=" Search For Books Here">
+            <button id="searchBtn" onclick="loadBooks()">Search</button>
           </div>
        
           <div class="answerDiv">
             <div>
-            <h4 id="searchAnswer">Your Search Result Here...</h4>
+            <table border="1" cellpadding="2">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Category</th>
+            <th>Published</th>
+        </tr>
+    </thead>
+    <tbody id="tableBody">
+      
+    </tbody>
+</table>
+
 
             </div>
 
