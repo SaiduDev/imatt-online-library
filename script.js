@@ -66,7 +66,7 @@ function getBooks(){
    let searchText = document.getElementById("searchInput").value;
 
     const url = `https://www.googleapis.com/books/v1/volumes?q=${searchText}`;
-searchText ="";
+
     try {
         // wait for response
         const response = await fetch(url);
