@@ -1,0 +1,450 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.loginBody{
+    
+   background-image: url(library-books-background-book-closet-filled-41199253.jpg);
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+
+    height: 920px;
+   
+
+}
+.form{
+     background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    width:35%;
+    padding: 10px;
+}
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+   
+    height: 60px;
+}
+.buttons button{
+    width: 250px;
+    height: 40px;
+    margin: 5px;
+    border-radius: 20px;
+    font-size: 20px;
+     background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    box-shadow: -2px -3px 5px black, 2px 5px 5px black;
+}
+form{
+    margin: 20px;
+    padding: 15px;
+}
+form input{
+    width: 95%;
+    height: 50px;
+    font-size: 18px;
+}
+form label{
+    text-align: left;
+    padding: 10px;
+    font-size: 21px;
+}
+form button{
+    text-align: center;
+    width: 95%;
+    height: 50px;
+    font-size: 21px;
+    font-weight: bold;
+    color: #333;
+    background-color: rgb(29, 169, 169);
+    box-shadow: -2px -3px 7px rgb(29, 169, 169), 2px 5px 5px rgb(29, 169, 169) ;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f4f4f4;
+}
+nav {
+ 
+    display: flex;
+    justify-content: center;
+   
+    flex-direction: column;
+
+}
+nav a {
+    color: white;
+    
+    text-decoration: none;
+    font-weight: bold;
+   margin: 3px;
+    font-size: 15px;
+  
+}
+nav a:hover{
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    color: green;
+}
+nav p{
+  padding: 10px;
+}
+.screen{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 900px;
+  
+}
+.leftSidebar .img{
+      display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.img img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin: 10px;
+}
+ .leftSidebar{
+   
+      position: sticky;
+        top: 0;
+        bottom: 0;
+    flex: 0.5;
+    background: rgb(41, 38, 38);
+    height:900px;
+    color: white;
+  
+  
+}
+.container{
+    flex: 1.7;
+    display: block;
+   background: #ddd;
+    backdrop-filter: blur(10px);
+    height: 900px;
+   
+}
+    input, select {
+        width: 100%;
+        padding: 10px;
+        border-radius: 6px;
+        border: 1px solid #bbb;
+        margin-top: 10px;
+    }
+    button {
+        background: #333;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+    .burger{
+        font-size: 27px;
+        display: none;
+    }
+  .Buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+  }
+  .dashButton{
+     display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: -2px -2px 7px black, 2px 7px 7px black;
+     animation-name: buttonrotate;
+animation-duration: 5s;
+animation-iteration-count: infinite;
+    height: 150px;
+    transition: 7s background-color;
+    width: 50%;
+    margin: 20px;
+   
+  }
+  #borderDesign{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: -2px -2px 7px black, 2px 7px 7px black;
+  background: white;
+    height: 150px;
+    transition: 7s background-color;
+    width: 50%;
+    margin: 20px;
+  animation-name: borderDesign;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  }
+  .Buttons button{
+    width: 350px;
+    height: 80px;
+    margin: 20px;
+    background: white;
+    color: black;
+    font-size: 21px;
+    font-weight: bold;
+border: 3px solid black;
+    
+  }
+  
+   .container table{
+    width: 100%;
+    margin: 10px;
+   }
+   
+   #clearbooks{
+    color: red;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border:3px solid red;
+    margin: 20px;
+   }
+   .container h1{
+    font-size: 45px;
+   animation-name:colorChanges;
+   animation-duration: 7s;
+   animation-iteration-count: infinite;
+   }
+   .blurDashContainer{
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    padding: 10px;
+    height: 100%;
+    width: 100%;
+   }
+   .searchDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+   }
+      .searchDiv input{
+        width: 80%;
+        border-radius: 0px;
+      }
+        .searchDiv button{
+            background: none;
+            border: 2px solid grey;
+            color: black;
+            font-size: 16px;
+        }
+        .searchDiv button:hover{
+            color: white;
+
+             animation-name: buttonrotate;
+animation-duration: 5s;
+animation-iteration-count: infinite;
+        }
+   .searcgIcon{
+     display: flex;
+     margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    background: white;
+    color: black;
+    height: 26px;
+    font-size: 20px;
+    border-top-left-radius: 20px ;
+    border-bottom-left-radius: 20px;
+   }
+   .answerDiv{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   }
+   .answerDiv div{
+    margin: 20px;
+    display: flex;
+   justify-content: center;
+   align-items: center;
+     height: 400px;
+    width: 80%;
+    border: 2px solid black;
+    border-radius: 20px;
+    animation-name: borderDesign;
+    animation-duration: 5s;
+animation-iteration-count: infinite;
+   }
+@media (max-width: 768px){
+    .dashButton{
+        width: 100px;
+        height: auto;
+        padding: 10px;
+        
+    }
+    
+    .dashButton button{
+        width: 100px;
+        height:auto;
+        font-size:12px;
+        
+    }
+    #borderDesign{
+        width: 100px;
+        height: auto;
+        padding: 8px;
+    }
+    .container h1{
+         font-size: 40px;
+    }
+    .container table{
+    width: 100%;
+    margin: 5px;
+   }
+     .leftSidebar{
+        flex: 0.1;
+        height: 900px;
+        padding: 10px;
+        width: auto;
+           background: rgb(159, 41, 41);
+          z-index: 99999;    
+        }
+       
+     .leftSidebar .navbar{
+        flex-direction: column;
+        display: none;
+        font-size: 12px;
+       width: 350px;
+        padding: 5px;
+         
+          height: 100%;
+
+        
+    }
+     .burger{
+        font-size: 23px;
+        display: block;
+        font-size: 27px;
+        margin-top: 10px;
+        margin-left: 10px;
+     }
+    
+      .navbar.show{
+         border-top-left-radius: 20px;
+border-top-right-radius: 20px;
+        display: flex;
+        position: absolute;
+      
+         background: rgb(41, 38, 38);
+         animation-name: navAnimation;
+         animation-duration: 0.1s;
+    }
+
+    .form{
+    background: white;
+    width:90%;
+    padding: 10px;
+}
+    .buttons button{
+
+        width: 120px;
+    }
+    .container{
+        height: 100%;
+        padding: 10px;
+    }
+    form input{
+        height: 40px;
+    }
+   
+}
+
+
+
+
+@keyframes navAnimation{
+    0%{
+        width: 0px;
+    }
+    100%{
+
+    }
+}
+@keyframes colorChanges{
+    0%{
+       text-shadow: -2px 2px 8px yellow,
+       2px 2px 8px green,
+       2px 2px 8px red,
+       2px 2px 8px blue;
+        
+    }
+    75%{
+         text-shadow: 
+           2px 2px 8px rgb(213, 4, 109),
+       2px 2px 8px purple,
+          -2px 2px 8px rgb(11, 203, 27),
+       2px 2px 8px firebrick;
+
+    }
+    100%{
+          text-shadow: 
+           2px 2px 8px rgb(137, 142, 8),
+       2px 2px 8px rgb(2, 2, 83),
+          -2px 2px 8px yellow,
+       2px 2px 8px khaki;
+      
+
+    }
+}
+@keyframes buttonrotate{
+    0%{
+       background:  aqua;
+    }
+   
+    30%{
+           background: green;
+    }
+    50%{
+          background: purple;
+    }
+    70%{
+           background: black;
+    }
+    100%{
+          background: yellow;
+    }
+}
+@keyframes borderDesign {
+     0%{
+       border: 4px solid  aqua;
+    }
+    20%{
+        border: 4px solid  red;
+ 
+    }
+    30%{
+        border: 4px solid  green;
+    }
+    50%{
+           border: 4px solid  purple;
+    }
+    60%{
+         border: 4px solid  pink;
+    }
+    70%{
+            border: 4px solid  black;
+    }
+    100%{
+          border: 4px solid  yellow;
+    }
+}
