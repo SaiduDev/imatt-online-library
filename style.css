@@ -293,7 +293,46 @@ animation-iteration-count: infinite;
     animation-duration: 5s;
 animation-iteration-count: infinite;
    }
+   .game{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center; 
+
+}
+.games{
+    
+display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+   .gamediv{
+   
+    width: 280px;
+    height: auto;
+    padding: 10px;
+    border-radius: 20px;
+    background: linear-gradient(aqua, grey);
+    margin: 15px;
+   }
+    .gamediv button{
+        background: linear-gradient(red, grey);
+        height: 40px;
+        width: 120px;
+        font-size: 20px;
+          animation-name: buttonrotate;
+animation-duration: 5s;
+animation-iteration-count: infinite;
+    }
 @media (max-width: 768px){
+    .games{
+        flex-direction: column;
+    }
+    .gamediv{
+        width: 150px;
+    }
     .dashButton{
         width: 90px;
         height: 60px;
