@@ -64,7 +64,7 @@ function getBooks(){
 
             async function loadBooks() {
    let searchText = document.getElementById("searchInput").value;
-
+ document.getElementById("text").innerHTML ="searching...";
     const url = `https://www.googleapis.com/books/v1/volumes?q=${searchText}`;
 
     try {
@@ -77,30 +77,46 @@ function getBooks(){
         const books = data.items;
         const tableBody = document.getElementById("tableBody");
         tableBody.innerHTML = "";
-       
+      
 
         books.forEach(book => {
             const info = book.volumeInfo;
 
             const row = document.createElement("tr");
-
+               
             row.innerHTML = `
                 <td>${info.title || "No Title"}</td>
                 <td>${info.authors ? info.authors.join(", ") : "Unknown"}</td>
                 <td>${info.categories ? info.categories.join(", ") : "None"}</td>
                 <td>${info.publishedDate || "N/A"}</td>
             `;
-
+           
             tableBody.appendChild(row);
+                     document.getElementById("text").style.display ="none";
+
         });
 
     } catch (error) {
+        document.getElementById("text").innerHTML=`Error Fetching book: ${error}`;
         console.error("Error fetching books:",error);
      }
 
  
 }
 
+function login(){
+      window.location.href ="index.html";
+    let login ={
+        email: document.getElementById("email"),
+        password: document.getElementById("password")
+    }
+    localStorage.setItem("loginData", login);
+ 
+  
+}
+   function getloginData(){
+    document.getElementById("loginData").innerHTML =JSON.parse(localStorage.getItem("loginData")||"[]");
+}
              
                function deleteAllBooks(){
                localStorage.clear();

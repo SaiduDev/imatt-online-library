@@ -7,27 +7,27 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="loginBody">
-    <div class="container">
+    <div class="logincontainer">
         <div class="form">
         <div style=" text-align: center;">
             <h1>Imatt Online Library</h1>
             <h2>Welcome Back!👋</h2>
         </div>
-        <div class="buttons">
+        <div class="loginbtn">
             <div>
               <a href="login.html">  <button style="background: rgb(155, 196, 196); color: black;">Sign In</button></a>
               <a href="#" ><button style="color: black;">Sign Up</button></a>
             </div>
         </div>
-   <form action="" method="post">
+   <form action="" method="post" onsubmit="login()" >
 
     <label for="">Email: </label>
     <br>
-    <input type="email" name="" id="" placeholder="Enter Your Email" required>
+    <input type="email" name="" id="email" placeholder="Enter Your Email" required>
     <br><br>
     <label for="">Password:</label>
     <br>
-    <input type="password" name="" id="" placeholder="Enter Your Password" required>
+    <input type="password" name="" id="password" placeholder="Enter Your Password" required>
     <br><br>
     <button id="login">Log in</button>
 
