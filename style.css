@@ -262,7 +262,7 @@ border: 3px solid black;
 animation-duration: 5s;
 animation-iteration-count: infinite;
         }
-   .searcgIcon{
+   .searchIcon{
      display: flex;
      margin-top: 10px;
     justify-content: center;

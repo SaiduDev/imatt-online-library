@@ -5,10 +5,6 @@ burger.onclick =()=>{
     
 }
 
-
-
-
-
 function getBooks(){
     return JSON.parse(localStorage.getItem("books")||"[]");
 }
@@ -25,13 +21,9 @@ function getBooks(){
             category:document.querySelector("#category").value,
             year:document.querySelector("#year").value,
             isbn:document.querySelector("#isbn").value,
-           
-        };
-       
-            let books=getBooks();
+            status:"Available"};let books=getBooks();
             books.push(book);
             saveBooks(books);
-        
             alert("Book Added Successfully!");
             window.location.href="viewBook.html";
         }
@@ -39,15 +31,13 @@ function getBooks(){
             let books=getBooks();
             let table=document.querySelector("#bookTable");
             books.forEach(b=>{
-                let row=`<tr onclick="openBook(${b.id})"><td>${b.title}</td><td>${b.author}</td><td>${b.category}</td><td>${b.year}</td></tr>`;
+                let row=`<tr onclick="openBook(${b.id})"><td>${b.title}</td><td>${b.author}</td><td>${b.category}</td><td>${b.year}</td><td>${b.status}</td></tr>`;
                 table.innerHTML+=row;
             });
-
             }
             function openBook(id){
                 localStorage.setItem("currentBook",id);
                 window.location.href="book-details.html";
-               
 
             }
             function loadBookDetails(){
@@ -59,10 +49,13 @@ function getBooks(){
                 document.querySelector("#detailCategory").innerText=book.category;
                 document.querySelector("#detailYear").innerText=book.year;
                 document.querySelector("#detailISBN").innerText=book.isbn;
-              
+                document.querySelector("#detailStatus").innerText=book.status;
             }
 
-            async function loadBooks() {
+
+
+
+            async function loadBook() {
    let searchText = document.getElementById("searchInput").value;
  document.getElementById("text").innerHTML ="searching...";
     const url = `https://www.googleapis.com/books/v1/volumes?q=${searchText}`;
@@ -104,19 +97,8 @@ function getBooks(){
  
 }
 
-function login(){
-      window.location.href ="index.html";
-    let login ={
-        email: document.getElementById("email"),
-        password: document.getElementById("password")
-    }
-    localStorage.setItem("loginData", login);
- 
-  
-}
-   function getloginData(){
-    document.getElementById("loginData").innerHTML =JSON.parse(localStorage.getItem("loginData")||"[]");
-}
+
+
              
                function deleteAllBooks(){
                localStorage.clear();
