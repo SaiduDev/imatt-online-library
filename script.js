@@ -21,7 +21,9 @@ function getBooks(){
             category:document.querySelector("#category").value,
             year:document.querySelector("#year").value,
             isbn:document.querySelector("#isbn").value,
-            status:"Available"};let books=getBooks();
+            status:"Available"
+        };
+            let books=getBooks();
             books.push(book);
             saveBooks(books);
             alert("Book Added Successfully!");
@@ -98,13 +100,89 @@ function getBooks(){
 }
 
 
+    function deleteAllBooks(){
+        localStorage.removeItem("books");
+       location.reload();
 
-             
-               function deleteAllBooks(){
-               localStorage.clear();
-               window.location.href ="viewBook.html";
+        
+     } 
 
-                
-               } 
+     function displayTimeTableData(){
+       let createNowButton = document.getElementById("createNowBtn");
+         if(createNowButton.textContent =="Cancel"){
+        createNowButton.textContent = "Create Now";
+        createNowButton.style.background ="green"
+       }else if(createNowButton.textContent =="Create Now"){
+        createNowButton.textContent = "Cancel";
+        createNowButton.style.background ="red";
+       }
 
-           
+      
+        let studyData = document.querySelector(".studyData");
+        studyData.classList.toggle("displayData");
+     }
+
+
+     let timeTable = JSON.parse(localStorage.getItem("timetable")) || [];
+     window.onload = function (){
+        timeTable.forEach(item =>
+             addRowToTable(item));
+     };
+
+    function addRow(){
+        let day = document.getElementById("day").value;
+        let module = document.getElementById("module").value;
+        let time = document.getElementById("time").value;
+        let duration = document.getElementById("duration").value;
+
+        if(!day || !module || !time || !duration) {
+            alert("please fill all fields");
+            return;
+        }
+              location.reload();
+    
+        const studyData = {
+            day, module, time, duration
+        };
+
+        timeTable.push(studyData);
+
+        localStorage.setItem("timetable", JSON.stringify(timeTable));
+ 
+        addRowToTable(data);
+
+      
+
+        }
+        
+
+        function addRowToTable(data){
+            const  tBody = document.getElementById("table");
+
+            const row = document.createElement("tr");
+
+            row.innerHTML = 
+            `<td>${data.day}</td>
+            <td>${data.module}</td>
+            <td>${data.time}</td>
+            <td>${data.duration}</td>`
+
+            tBody.appendChild(row);
+                   
+
+        }
+        let delBtn = document.getElementById("deleteTimeTable");
+      if(timeTable.length < 1){
+        delBtn.style.display ="none";
+      }else{
+        delBtn.style.display ="flex";
+      }
+
+          function deleteTimeTable2(){
+        localStorage.removeItem("timetable");
+       location.reload();
+
+        
+     } 
+
+

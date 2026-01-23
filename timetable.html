@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create Time Table</title>
+    <link rel="stylesheet" href="style.css">
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+      <div class="screen" style="height: 100%;">
+                  
+
+            <div class="leftSidebar" id="addNav" style="height: 700px ;">
+                  <span class="burger" id="burger"><i class="fa fa-bars" aria-hidden="true"></i></span>
+
+                <div class="navbar">
+                <div class="img">
+                                    <img src="IMG-20240318-WA0002.jpg" alt="Imatt collge Logo" width="200">
+                         <h1> Library system</h1>
+                </div>
+                  
+        <nav style="font-size: 9px; margin: 7px;" >
+         
+           
+            <a href="index.html"><p  ><i class="fas fa-tachometer-alt "> </i>Dashboard </p></a>
+            <hr width="100%">
+             <a href="timetable.html"> <p style="background: darkgray;"><i class="fas fa-clock"> </i> Time Table </p></a>
+  <hr style="width: 100%;">
+           <a href="addBook.html"> <p><i class="fas fa-plus"> </i>  Add Book </p></a>
+           <hr width="100%">
+          <a href="viewBook.html">  <p > <i class="fas fa-eye"> </i> View Books</p></a>
+          <hr width="100%">
+           <a href="search.html" ><p ><i class="fas fa-search"> </i> Search Book</p></a>
+            <hr width="100%">
+            <a href="status.html" ><p > <i class="fas fa-check-circle"> </i>Status</p></a>
+        </nav>
+        </div>
+        </div>
+
+        <div class="container" style="height: 700px">
+            <div class="timetableContainer">
+                <h2>Create your study Time Table</h2>
+                <p>Manage your study Time efficiently by creating a Study Time Table </p>
+                <P>"Time Management is Key"</P>
+                <button id="createNowBtn" onclick="displayTimeTableData()">Create Now</button>
+                
+
+                <div class="studyData">
+                    <h4>Create Time Table</h4>
+                    <input type="text" name="" id="day" placeholder="Enter study Day (Monday/Tuesday)">
+                    <input type="text" name="" id="module" placeholder="Enter Study Module">
+                    <input type="text" name="" id="time" placeholder="Enter Study Time">
+                    <input type="text" name="" id="duration" placeholder="Enter Study Duration (2hrs)">
+                    <button id="addButton" onclick="addRow()">Add</button>
+                </div>
+
+            </div>
+          <div class="timetable">
+            <table border="1" cellspacing="0" cellpadding="2" width="90%">
+                <thead>
+                    <tr>
+                        <th colspan="4">Study Time Table</th>
+                        
+                    </tr>
+                    <tr>
+                        <th>Day</th>
+                        <th>Module</th>
+                        <th>Time</th>
+                        <th>Duration</th>
+                    </tr>
+                </thead>
+
+                <tbody id="table">
+                    
+                </tbody>
+            </table>
+            <button id="deleteTimeTable" onclick="deleteTimeTable2()">Delete Time Table</button>
+        </div>
+        </div>
+        
+         </div>
+        <script src="script.js"></script>
+</body>
+</html>

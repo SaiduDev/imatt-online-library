@@ -91,7 +91,7 @@ nav {
     flex-direction: column;
 
 }
-nav a {
+nav a{
     color: white;
     
     text-decoration: none;
@@ -100,7 +100,7 @@ nav a {
     font-size: 15px;
   
 }
-nav a:hover{
+nav p:hover{
     background: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(10px);
     color: green;
@@ -326,6 +326,42 @@ display: flex;
 animation-duration: 5s;
 animation-iteration-count: infinite;
     }
+    .timetableContainer{
+        margin: 5px;
+        font-family: 'orbitron', sans-serif;
+        font-weight: bold;
+
+    }
+     .timetableContainer button{
+        background: green;
+        width: 220px;
+        border-radius: 20px;
+        height: 40px;
+        font-size: 18px;
+        font-weight: bold;
+        box-shadow: -2px -2px 5px black, 2px 7px 7px black;
+     }
+     .timetable{
+        margin-top: 30px;
+        margin-left: 0px;
+     }
+     #addButton{
+        width: 150px;
+        height: 35px;
+        padding: 10px;
+        border-radius: 5px;
+        background: red;
+     }
+     .studyData{
+        display: none;
+     }
+     .displayData{
+        display: block;
+     }
+     #deleteTimeTable{
+        background: red;
+        margin: 10px;
+     }
 @media (max-width: 768px){
     .games{
         flex-direction: column;
